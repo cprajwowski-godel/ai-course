@@ -18,4 +18,13 @@ test.describe("Playwright website", () => {
 
     await expect(playwrightDev.installationHeading).toBeVisible();
   });
+
+  test("get started link navigates to Installation pages", async ({ page }) => {
+    const playwrightDev = new PlaywrightDevPage(page);
+
+    await playwrightDev.goto();
+    await playwrightDev.clickGetStarted();
+
+    await expect(playwrightDev.installationHeading).toBeVisible();
+  });
 });
