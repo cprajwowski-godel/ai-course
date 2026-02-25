@@ -1,0 +1,15 @@
+{
+  "packageManager": "yarn@1.22.22",
+  "scripts": {
+    "test": "playwright test",
+    "test:report": "playwright show-report"
+  },
+  "dependencies": {
+    "@playwright/mcp": "^0.0.68"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "@types/node": "^25.3.0",
+    "typescript": "latest"
+  }
+}
