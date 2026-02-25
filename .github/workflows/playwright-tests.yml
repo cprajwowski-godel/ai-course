@@ -52,7 +52,7 @@ jobs:
 
       # Always upload traces for debugging failed tests
       - name: Upload Playwright traces
-        if: always()
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-traces
