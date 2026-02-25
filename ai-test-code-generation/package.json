@@ -1,0 +1,26 @@
+{
+  "name": "playwright-test-automation",
+  "version": "1.0.0",
+  "description": "Test automation framework using TypeScript, Playwright, ESLint, and Winston",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:specific": "playwright test --grep",
+    "lint": "eslint src tests --ext .ts",
+    "lint:fix": "eslint src tests --ext .ts --fix"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "winston": "^3.14.0"
+  }
+}
