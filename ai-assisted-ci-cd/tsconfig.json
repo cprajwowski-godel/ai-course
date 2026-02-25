@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "noImplicitAny": true,
+        "types": ["node"],
+        "resolveJsonModule": true
+    }
+}
