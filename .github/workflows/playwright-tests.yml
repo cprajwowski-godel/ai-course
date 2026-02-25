@@ -124,8 +124,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: yarn
-          cache-dependency-path: ai-assisted-ci-cd/yarn.lock
 
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
