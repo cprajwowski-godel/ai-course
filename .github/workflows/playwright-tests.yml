@@ -23,6 +23,11 @@ jobs:
     env:
       CI: true
 
+    # All "run" steps execute inside the project subfolder
+    defaults:
+      run:
+        working-directory: ai-assisted-ci-cd
+
     steps:
       # Check out the repository code
       - name: Checkout repository
@@ -42,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-html-report
-          path: playwright-report
+          path: ai-assisted-ci-cd/playwright-report
           retention-days: 30
 
       # Always upload traces for debugging failed tests
@@ -51,5 +56,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-traces
-          path: test-results/**/trace*.zip
+          path: ai-assisted-ci-cd/test-results/**/trace*.zip
           retention-days: 30
