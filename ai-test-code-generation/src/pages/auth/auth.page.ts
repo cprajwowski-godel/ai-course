@@ -22,6 +22,10 @@ export class AuthPage extends BasePage {
     return this.page.getByTestId("login-btn");
   }
 
+  get rememberMeCheckbox(): Locator {
+    return this.page.getByTestId("remember-me");
+  }
+
   get errorMessage(): Locator {
     return this.toastMessage;
   }
