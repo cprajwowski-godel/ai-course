@@ -58,3 +58,12 @@ jobs:
           name: playwright-traces
           path: ai-assisted-ci-cd/test-results/**/trace*.zip
           retention-days: 30
+
+      - name: Notify Teams on failure
+        if: always()
+        uses: jdcargile/ms-teams-notification@v1.4
+        with:
+          github-token: ${{ github.token }}
+          ms-teams-webhook-uri: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          notification-summary: "Playwright Tests Failed | PR: ${{ github.event.pull_request.title }} | Author: ${{ github.event.pull_request.user.login }} | Branch: ${{ github.head_ref }} | Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          notification-color: dc3545
