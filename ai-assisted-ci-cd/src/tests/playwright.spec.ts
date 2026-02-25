@@ -7,7 +7,7 @@ test.describe("Playwright website", () => {
 
     await playwrightDev.goto();
 
-    await expect(page).toHaveTitle(/Playwright/);
+    await expect(page).toHaveTitle(/Playwrights/);
   });
 
   test("get started link navigates to Installation page", async ({ page }) => {
